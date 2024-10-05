@@ -1,0 +1,9 @@
+username:shah
+password:kazmi786
+
+first cammand
+mongodump --uri="mongodb://localhost:27017" --out=./data
+
+
+second cammand
+mongostore --uri="mongodb+srv://shah:kazmi786@client-projects.3qstv.mongodb.net/"  ./data

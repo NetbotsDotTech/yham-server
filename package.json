@@ -1,0 +1,57 @@
+{
+  "name": "backend-api",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A backend API for managing museum artifacts with CRUD operations, including S3 storage for media files and QR code generation.",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"Build process not defined\" && exit 0"
+  },
+  "author": "Saqlain Shah ",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saqlain-shah"
+  },
+  "homepage": "https://github.com/NetbotsDotTech/yousuf-hussain-abadi-meusum#readme",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.637.0",
+    "@aws-sdk/s3-request-presigner": "^3.637.0",
+    "@sendgrid/mail": "^8.1.3",
+    "axios": "^1.7.7",
+    "bcryptjs": "^2.4.3",
+    "chalk": "^5.3.0",
+    "cli-progress": "^3.12.0",
+    "connect-mongodb-session": "^5.0.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-async-handler": "^1.2.0",
+    "express-session": "^1.18.0",
+    "express-validator": "^7.2.0",
+    "figlet": "^1.7.0",
+    "fs": "^0.0.1-security",
+    "image-downloader": "^4.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.4",
+    "multer": "^1.4.5-lts.1",
+    "multer-s3": "^3.0.1",
+    "nodemailer": "^6.9.15",
+    "ora": "^8.1.0",
+    "path": "^0.12.7",
+    "pdf-lib": "^1.17.1",
+    "pdfkit": "^0.15.0",
+    "qrcode": "^1.5.4",
+    "winston": "^3.14.2",
+    "winston-daily-rotate-file": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.53.0",
+    "nodemon": "^3.0.1"
+  }
+}
