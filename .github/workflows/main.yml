@@ -20,10 +20,10 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd ~/actions-runner/_work/yham-server/yham-server  # Correct path
+          cd ~/actions-runner/_work/yham-server/yham-server  
           npm install
 
       - name: Start Server with PM2
         run: |
-          cd ~/actions-runner/_work/yham-server/yham-server  # Ensure you're in the right directory
-          pm2 startOrRestart ecosystem.config.js --env production  # Start your server
+          cd ~/actions-runner/_work/yham-server/yham-server 
+          npm run pm2-start
