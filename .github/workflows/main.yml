@@ -26,4 +26,12 @@ jobs:
       - name: Start Server with PM2
         run: |
           cd ~/actions-runner/_work/yham-server/yham-server 
-          npm start
+          pm2 start server.js --name backend-api --time
+          
+      - name: Save PM2 Process List
+        run: |
+          pm2 save  # Save the PM2 process list so it's restarted on reboot
+
+      - name: Verify PM2 Status
+        run: |
+          pm2 status  # Optional: Check if PM2 is running correctly
