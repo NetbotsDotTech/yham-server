@@ -20,9 +20,14 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd /path/to/your/repo  # Update with the actual path of your repo on the runner
+          cd ~/actions-runner/_work/yham-server/yham-server  # Corrected path
           npm install
 
       - name: Deploy to EC2
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@your_ec2_ip 'cd /path/to/your/repo && git pull origin main && npm install && pm2 restart your-app-name || pm2 start your-app-name --name your-app-name'
+          ssh -o StrictHostKeyChecking=no ubuntu@your_ec2_ip '
+            cd ~/actions-runner/_work/yham-server/yham-server && \
+            git pull origin main && \
+            npm install && \
+            pm2 startOrRestart ecosystem.config.js --env production
+          '
