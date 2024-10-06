@@ -20,14 +20,10 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd ~/actions-runner/_work/yham-server/yham-server  # Corrected path
+          cd ~/actions-runner/_work/yham-server/yham-server  # Correct path
           npm install
 
-      - name: Deploy to EC2
+      - name: Start Server with PM2
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@ec2-18-209-160-201.compute-1.amazonaws.com '
-            cd ~/actions-runner/_work/yham-server/yham-server && \
-            git pull origin main && \
-            npm install && \
-            pm2 startOrRestart ecosystem.config.js --env production
-          '
+          cd ~/actions-runner/_work/yham-server/yham-server  # Ensure you're in the right directory
+          pm2 startOrRestart ecosystem.config.js --env production  # Start your server
