@@ -1,0 +1,19 @@
+// server.js
+import express from 'express';
+
+const app = express();
+const PORT = process.env.PORT || 3000; // Set the port to either the environment variable or 3000
+
+// Define a route that sends the message
+app.get('/', (req, res) => {
+  res.send('Hello from Yousuf Hussain Abadi Museum');
+});
+
+
+
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
+
