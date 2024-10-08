@@ -30,7 +30,7 @@ jobs:
       - name: Start Server with PM2
         run: |
           cd ~/actions-runner/_work/yham-server/yham-server 
-          pm2 start server.js --name backend-api --time
+          npm pm2-start --name backend-api --time
 
       - name: Save PM2 Process List
         run: |
