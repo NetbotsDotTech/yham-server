@@ -26,12 +26,12 @@ jobs:
       - name: Stop Existing PM2 Process
         run: |
           cd ~/actions-runner/_work/yham-server/yham-server
-          npm run stop-pm2 || echo "PM2 process 'backend-api' not running, nothing to stop"
+          npm run pm2-stop || echo "PM2 process 'backend-api' not running, nothing to stop"
 
       - name: Start Server with PM2
         run: |
           cd ~/actions-runner/_work/yham-server/yham-server
-          npm run start-pm2 --time
+          npm run pm2-start --time
 
       - name: Save PM2 Process List
         run: |
