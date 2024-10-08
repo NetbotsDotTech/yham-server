@@ -3,7 +3,6 @@ import ora from 'ora';
 import figlet from 'figlet';
 import cliProgress from 'cli-progress';
 import express from 'express';
-import dotenv from 'dotenv';
 import cors from 'cors';
 
 import { requestLogger, errorLogger } from './src/middlewares/logger.js';
@@ -21,8 +20,9 @@ import FeedbackRoutes from './src/routes/feedbackRoutes.js';
 
 
 
-
+import dotenv from 'dotenv';
 dotenv.config();
+
 const app = express();
 // Log every incoming request
 // app.use(requestLogger);
@@ -83,7 +83,32 @@ app.use(express.urlencoded({ extended: true }));
 
 
 
-
+app.get('/', (req, res) => {  
+  res.send(`
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Hello from Yousuf Hussain Abadi Measum Server</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+        }
+        h1 {
+          color: #333;
+        }
+        p {
+          color: #666;
+        }
+      </style>
+    </head>
+    <body>
+      <h1>Hello from Yousuf Hussain Abadi Measum Server</h1>
+      <p>The server is running on port 3000.</p>
+    </body>
+    </html>
+    `);
+});
 
 app.use('/api/user',userRoutes );
 app.use('/api/artifacts', artifactRoutes);

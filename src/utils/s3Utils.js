@@ -2,10 +2,10 @@ import { S3Client, PutObjectCommand, DeleteObjectCommand } from '@aws-sdk/client
 import crypto from 'crypto';
 import { promisify } from 'util';
 import QRCode from 'qrcode';
-import dotenv from 'dotenv';
+// import dotenv from 'dotenv';
 
 
-dotenv.config();
+// dotenv.config();
 
 // Initialize AWS S3 client
 const s3 = new S3Client({
