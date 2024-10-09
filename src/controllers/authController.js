@@ -41,9 +41,9 @@ export const loginUser = asyncHandler(async (req, res) => {
   const user = await User.findOne({ email });
   if (user && (await user.matchPassword(password))) {
     res.cookie('token', generateToken(user._id), {
-      secure: process.env.NODE_ENV === 'production', 
-      sameSite: 'Strict', 
-      maxAge: 30 * 24 * 60 * 60 * 1000, 
+      secure: false,
+      sameSite: 'Lax', 
+      maxAge: 30 * 24 * 60 * 60 * 1000,
     });
 
     res.json({
