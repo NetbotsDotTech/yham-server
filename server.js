@@ -4,6 +4,7 @@ import figlet from 'figlet';
 import cliProgress from 'cli-progress';
 import express from 'express';
 import cors from 'cors';
+import pkg from './package.json' assert { type: 'json' };
 
 import { requestLogger, errorLogger } from './src/middlewares/logger.js';
 
@@ -19,6 +20,7 @@ import otpRoutes from './src/routes/otpRoutes.js';
 import FeedbackRoutes from './src/routes/feedbackRoutes.js';
 
 
+const { version } = pkg;
 
 import dotenv from 'dotenv';
 dotenv.config();
@@ -105,6 +107,7 @@ app.get('/', (req, res) => {
     <body>
       <h1>Hello from Yousuf Hussain Abadi Measum Server</h1>
       <p>The server is running on port 3000.</p>
+    <p>App Version: ${version}</p>
     </body>
     </html>
     `);

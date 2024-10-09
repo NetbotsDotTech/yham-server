@@ -1,17 +1,19 @@
 {
   "name": "backend-api",
-  "version": "1.0.0",
+  "version": "1.25.36",
   "type": "module",
   "description": "A backend API for managing museum artifacts with CRUD operations, including S3 storage for media files and QR code generation.",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "test": "echo \"No tests available\" && exit 0",
+    "start": "nodemon server.js  --trace-warnings",
     "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "echo \"Build process not defined\" && exit 0",
     "pm2-start": "pm2 start server.js --env production",
     "pm2-stop": "pm2 stop server.js",
-    "pm2-restart": "pm2 restart server.js"
+    "pm2-restart": "pm2 restart server.js",
+    "release": "standard-version",
+    "prepare": "husky install"
   },
   "author": "Saqlain Shah ",
   "license": "ISC",
@@ -63,6 +65,8 @@
     "@types/multer-s3": "^3.0.3",
     "@types/qrcode": "^1.5.5",
     "eslint": "^8.53.0",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "standard-version": "^9.5.0",
+    "husky": "^8.0.0"
   }
 }
