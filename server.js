@@ -28,8 +28,8 @@ const allowedOrigins = [
   'http://localhost:3000',
   'http://localhost:3001',
   'http://localhost:5173',
-  'https://ec2-35-153-210-209.compute-1.amazonaws.com/',
-  'http://ec2-35-153-210-209.compute-1.amazonaws.com/',
+  'https://ec2-35-153-210-209.compute-1.amazonaws.com',
+  'http://ec2-35-153-210-209.compute-1.amazonaws.com',
 ];
 
 const corsOptions = {
