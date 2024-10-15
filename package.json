@@ -1,6 +1,6 @@
 {
   "name": "backend-api",
-  "version": "2.0.26",
+  "version": "2.0.27",
   "type": "module",
   "description": "A backend API for managing museum artifacts with CRUD operations, including S3 storage for media files and QR code generation.",
   "main": "server.js",
