@@ -6,6 +6,9 @@ const artifactSchema = new mongoose.Schema({
   serialNo: { type: String, required: true, unique: true },
   description: { type: String, required: true },
   madeOf: { type: String, required: true },
+  purchasePrice: { type: Number},
+  salePrice: { type: Number },
+  source:{ type: String },
   particulars: {
     width: { type: Number },
     depth: { type: Number },

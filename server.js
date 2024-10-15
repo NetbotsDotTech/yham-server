@@ -6,12 +6,19 @@ import { errorHandler } from './src/middlewares/errorHandler.js';
 import connectDB from './db.js';
 import cookieParser from 'cookie-parser';
 
+
+
 import userRoutes from './src/routes/userRoutes.js';
 import artifactRoutes from './src/routes/artifactRoutes.js';
 import qrRoutes from './src/routes/qrCodes.js';
 import timeTableRoutes from './src/routes/timeTableRoutes.js';
 import otpRoutes from './src/routes/otpRoutes.js';
 import FeedbackRoutes from './src/routes/feedbackRoutes.js';
+import MediaRoutes from './src/routes/uploadMediaRoutes.js';
+import BookRoutes from './src/routes/bookRoutes.js';
+import BackupRoutes from './src/routes/backupRoutes.js';
+
+
 const pkg = JSON.parse(fs.readFileSync(new URL('./package.json', import.meta.url)));
 
 
@@ -98,6 +105,9 @@ app.use('/api/feedback', FeedbackRoutes);
 app.use('/api/qr-codes', qrRoutes);
 app.use('/api/time-table', timeTableRoutes);
 app.use('/api/otp', otpRoutes);
+app.use('/api/media', MediaRoutes);
+app.use('/api/book', BookRoutes);
+app.use('/api/backup', BackupRoutes);
 app.use(errorHandler);
 
 app.listen(PORT, () => {
