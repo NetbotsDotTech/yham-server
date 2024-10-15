@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.21](https://github.com///compare/v2.0.1...v2.0.21) (2024-10-15)
+
+
+### Bug Fixes
+
+* fixed cors issue ([28a78cb](https://github.com///commit/28a78cb90e2ca72b7763d68e7b461b5554bf4664))
+
 ### [2.0.20](https://github.com///compare/v2.0.1...v2.0.20) (2024-10-09)
 
 
